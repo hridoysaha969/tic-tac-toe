@@ -1,0 +1,63 @@
+.gameBord {
+  margin-right: 2rem;
+}
+
+.gameTitleBox {
+  margin-bottom: 2.5rem;
+}
+.gameTitle {
+  color: #001fa7;
+  margin: 0;
+}
+.gameSubtitle {
+  float: right;
+}
+.gameSubtitle,
+.gameSubtitle a {
+  font-size: 0.75rem;
+  color: #d400ff;
+  text-decoration: none;
+}
+.status {
+  font-weight: bold;
+  color: #000000;
+}
+.moveLists {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #001fa7;
+  margin-bottom: 0.5rem;
+}
+.moves {
+  border: none;
+  outline: none;
+  padding: 0.5rem 1rem;
+  margin-left: 0.5rem;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+  background: rgba(0, 255, 115, 0.3);
+  font-size: 0.85rem;
+}
+.moveBg {
+  border: none;
+  outline: none;
+  padding: 0.5rem 1rem;
+  margin-left: 0.5rem;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+  background: rgba(255, 0, 43, 0.3);
+  font-size: 0.85rem;
+}
+
+@media screen and (max-width: 576px) {
+  .gameBord {
+    margin-right: 0;
+    margin-bottom: 3rem;
+  }
+}
