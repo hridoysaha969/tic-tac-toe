@@ -47,6 +47,7 @@ class Game extends React.Component {
             stepNumber: history.length,
             xIsNext: !this.state.xIsNext
         })
+
     }
 
     jumpTo = step => {
@@ -55,7 +56,6 @@ class Game extends React.Component {
             xIsNext: step % 2 === 0
         })
     }
-
     render() {
         const history = this.state.history;
         const current = history[this.state.stepNumber];
@@ -75,9 +75,13 @@ class Game extends React.Component {
         if(winner) {
             status = 'Winner is ' + winner
         } else {
-            
+
+            let newVal = current.squeres.filter((val) => {
+                return val === null
+            })
+
             for(let i = 0; i < current.squeres.length; i++) {
-                if(current.squeres[i] != null) {
+                if(newVal.length === 0) {
                     status = 'Match Draw'
                 } else {
                     status = 'Next turn for ' + (this.state.xIsNext ? `'X'` : `'O'`)
@@ -90,7 +94,7 @@ class Game extends React.Component {
                 <div className={classes.gameBord}>
                     <div className={classes.gameTitleBox}>
                         <h2 className={classes.gameTitle}>Tic Tac Toe</h2>
-                        <span className={classes.gameSubtitle}>By <a target="_blank" href="https://www.facebook.com/hridoysaha143">Hridoy Saha</a></span>
+                        <span className={classes.gameSubtitle}>By <a rel="noreferrer" target="_blank" href="https://www.facebook.com/hridoysaha143">Hridoy Saha</a></span>
                     </div>
                     <Board onClick={this.handleClick} squeres={current.squeres} />
                 </div>
